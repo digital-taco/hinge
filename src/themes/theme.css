@@ -1,0 +1,76 @@
+:root {
+  /* Global transition time for interactive elements, such as buttons and links */
+  --interactive-transition-time: 0.1s;
+
+  /* Default text color for all elements */
+  --global-text-color: #222;
+
+  /* Font Families */
+  --primary-font-family: arial;
+  --secondary-font-family: arial;
+
+  /**********************************************************************/
+  /* GLOBAL COLOR MODIFIERS                                             */
+  /**********************************************************************/
+
+  /* [MODIFIER VALUE (0 - 1) Scales the saturation of all themed element colors. */
+  --global-saturation-modifier: 1;
+
+  /* [MODIFIER VALUE (0 - 1) Scales the brightness of all themed element colors. */
+  --global-lightness-modifier: 1;
+
+  /**********************************************************************/
+  /* INTERACTIVE ELEMENT MODIFIERS (buttons, list items, etc.)          */
+  /**********************************************************************/
+
+  /* [HUE VALUE (0 - 360)] Primary color for interactive elements, such as buttons and links */
+  --interactive-primary-color: var(--theme-primary-color);
+
+  /* [MODIFIER VALUE (0 - 1) Scales the saturation of interactive element colors. */
+  --interactive-saturation-modifier: calc(var(--global-saturation-modifier) * 1);
+
+  /* [MODIFIER VALUE (0 - 1) Scales the brightness of interactive element colors. */
+  --interactive-lightness-modifier: calc(var(--global-lightness-modifier) * 1);
+
+  /**********************************************************************/
+  /* THEMED TEXT MODIFIERS (colored text)                               */
+  /**********************************************************************/
+
+  /* [MODIFIER VALUE (0 - 1) Scales the saturation of text. */
+  --text-saturation-modifier: 1;
+
+  /* [MODIFIER VALUE (0 - 1) Scales the lightness of text. */
+  --text-lightness-modifier: 1;
+
+  /* [MODIFIER VALUE (0 - 1) Scales the alpha of text. */
+  --text-alpha-modifier: 1;
+
+  /* global text scalar */
+  /* global line height scalar */
+  /* global padding scalar? */
+}
+
+* {
+  font-family: var(--primary-font-family);
+  color: var(--global-text-color);
+  box-sizing: border-box;
+}
+
+.blue_theme {
+  --theme-primary-color: 240;
+}
+.red_theme {
+  --theme-primary-color: 360;
+}
+.green_theme {
+  --theme-primary-color: 120;
+  --interactive-lightness-modifier: 0.5;
+}
+.gray_theme {
+  --theme-primary-color: 0;
+  --global-saturation-modifier: 0;
+}
+.orange_theme {
+  --theme-primary-color: 33;
+}
+

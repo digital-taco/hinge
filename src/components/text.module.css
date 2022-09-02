@@ -1,0 +1,19 @@
+.text_emphasis {
+  --text-saturation: 50%;
+  --text-lightness: 50%;
+  --text-alpha: 100%;
+  color: hsl(
+    var(--text-color)
+    calc(var(--text-saturation) * var(--text-saturation-modifier))
+    calc(var(--text-lightness) * var(--text-lightness-modifier))
+    / calc(var(--text-alpha) * var(--text-alpha-modifier))
+  );
+}
+
+.text_emphasis[data-text-emphasis="secondary"] {
+  --text-alpha: 80%;
+}
+
+.themed_text {
+  --text-color: var(--theme-primary-color);
+}

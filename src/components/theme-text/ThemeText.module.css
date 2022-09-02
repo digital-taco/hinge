@@ -1,0 +1,20 @@
+.theme_text {
+  --theme-text-saturation: 50%;
+  --theme-text-lightness: 50%;
+  --theme-text-alpha: 100%;
+
+  color: hsl(
+    var(--theme-primary-color)
+    calc(var(--theme-text-saturation) * var(--theme-text-saturation-modifier))
+    calc(var(--theme-text-lightness) * var(--theme-text-lightness-modifier))
+    / calc(var(--theme-text-alpha) * var(--theme-text-alpha-modifier))
+  );
+}
+
+.theme_text[data-text-emphasis="low"] {
+  --theme-text-alpha: 80%;
+}
+
+.theme_text[data-text-emphasis="high"] {
+  --theme-text-saturation: 200%;
+}

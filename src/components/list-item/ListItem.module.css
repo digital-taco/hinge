@@ -1,0 +1,4 @@
+.list_item {
+  padding: 8px 12px;
+  color: var(--button-text-color, var(--global-text-color));
+}

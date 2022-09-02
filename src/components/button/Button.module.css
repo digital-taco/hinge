@@ -1,0 +1,16 @@
+.button {
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.button[data-button-emphasis="medium"] {
+  border: solid 1px hsl(
+    var(--interactive-primary-color)
+    calc(100% * var(--interactive-saturation-modifier))
+    calc(50% * var(--interactive-lightness-modifier))
+  );
+}
+
+.button[data-button-emphasis="high"] {
+  --text-lightness: 100%;
+}

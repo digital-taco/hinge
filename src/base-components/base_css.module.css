@@ -1,0 +1,37 @@
+@layer base_css {
+  .base_text {
+    font-size: var(--font-size-standard, 14px);
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-weight: normal;
+  }
+
+  .base_click_affordance {
+    cursor: pointer;
+  }
+
+  .base_button {
+    background: none;
+    padding: 0;
+    border-width: 1px;
+    border: none;
+    display: inline-block;
+  }
+
+  .base_li {
+    list-style-type: none;
+  }
+
+  .base_ul {
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+  }
+
+  .base_input {
+    background: transparent;
+    outline: none;
+    border-width: 1px;
+  }
+}

@@ -1,0 +1,46 @@
+.click_affordance {
+  transition: var(--interactive-transition-time);
+  background: var(--calculated-background-color);
+
+  --background-saturation: 100%;
+  --background-lightness: 50%;
+
+  --calculated-background-color: hsl(
+    var(--theme-primary-color)
+    calc(var(--background-saturation) * var(--interactive-saturation-modifier, 1))
+    calc(var(--background-lightness) * var(--interactive-lightness-modifier, 1))
+    / var(--background-alpha)
+  );
+}
+
+/* Low Emphasis */
+.click_affordance[data-emphasis="low"] {
+  --background-alpha: 0%;
+}
+.click_affordance[data-emphasis="low"]:not(:disabled):not(:active):hover {
+  --background-alpha: 20%;
+  --background-lightness: 80%;
+}
+.click_affordance[data-emphasis="low"]:not(:disabled):focus {
+  --background-alpha: 20%;
+  --background-lightness: 70%;
+}
+.click_affordance[data-emphasis="low"]:not(:disabled):active {
+  --background-alpha: 20%;
+  --background-lightness: 65%;
+}
+
+/* High Emphasis */
+.click_affordance[data-emphasis="high"] {
+  --background-alpha: 100%;
+}
+.click_affordance[data-emphasis="high"]:not(:disabled):hover {
+  --background-lightness: 45%;
+}
+.click_affordance[data-emphasis="high"]:not(:disabled):focus {
+  --background-lightness: 40%;
+}
+.click_affordance[data-emphasis="high"]:not(:disabled):active {
+  --background-lightness: 35%;
+}
+
