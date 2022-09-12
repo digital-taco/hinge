@@ -1,0 +1,7 @@
+.solid_container_primary {
+  background: hsl(
+    var(--theme-primary-color)
+      calc(50% * var(--global-saturation-modifier))
+      calc(90% * var(--global-lightness-modifier))
+    );
+}
