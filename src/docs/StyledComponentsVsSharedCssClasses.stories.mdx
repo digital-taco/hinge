@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Decisions/Styled Components vs. Shared CSS Classes" />
+
+# Styled Components vs. Shared CSS Classes
+
+The problem:
+
+Multiple components need a colored background that automatically matches the current theme.
+
+Do you create a styled component that handles setting the background?
+
+Or do you create a shared CSS class that can be applied to each of the container elements that need it?
+
+### Styled Components
+
+#### Pros
+
+- Tends to be scoped much more than CSS
+- Somewhat clearer declarative code
+- Can be multi-purpose
+- Can encourage clearer semantics (since it may need to be an article, section, etc.)
+- Purpose is more clear to the consumer
+
+#### Cons
+
+- Unless using it as a polymorphic component, it will add another layer to the dom
+- Specific to the framework
+
+### Shared CSS Classes
+
+#### Pros
+
+- Easy to implement and use
+- Doesn't add to the dom in any way (other than the classname)
+
+#### Cons
+
+- More likely to run into cascade issues
+- Less clear as to what its purpose is
+- More likely to run into naming conflicts (still very unlikely)
+- Much less configurable
+- Cannot be multi-purpose
+
+## Decision
+
+Use styled components. While not framework agnostic, it is much clearer what the purpose is. It is better to avoid a mix of styled components and shared css classnames.
