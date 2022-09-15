@@ -1,16 +1,16 @@
 import { forwardRef } from 'react'
 import baseStyles from '../base_css.module.css'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
 
-type BaseListProps = React.ComponentProps<'ul'>
-
-function BaseList(
-  { children, className, ...props }: BaseListProps,
-  ref: React.Ref<HTMLUListElement>
+function BaseList<ComponentType extends React.ElementType = 'ul'>(
+  { as, children, className, ...props }: PolymorphicPropsWithRef<ComponentType>,
+  ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
+  const TagName = as || 'ul'
   return (
-    <ul {...props} className={`${baseStyles.base_ul} ${className}`} ref={ref}>
+    <TagName {...props} className={`${baseStyles.base_ul} ${className}`} ref={ref}>
       {children}
-    </ul>
+    </TagName>
   )
 }
 

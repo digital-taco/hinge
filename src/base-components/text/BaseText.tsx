@@ -1,20 +1,13 @@
 import { forwardRef } from 'react'
 import baseStyles from '../base_css.module.css'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
 
-type BaseTextProps = React.ComponentProps<'div'> & {
-  /* It _must_ be given a component type to render as. */
-  as: any
-}
-
-function BaseText(
-  { as: Tagname, children, className, ...props }: BaseTextProps,
-  ref: React.Ref<HTMLElement>
+function BaseText<ComponentType extends React.ElementType = 'span'>(
+  { as, className, ...props }: PolymorphicPropsWithRef<ComponentType>,
+  ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
-  return (
-    <Tagname {...props} className={`${baseStyles.text} ${className}`} ref={ref}>
-      {children}
-    </Tagname>
-  )
+  const TagName = as || 'span'
+  return <TagName className={`${baseStyles.text} ${className}`} {...props} ref={ref} />
 }
 
 export default forwardRef(BaseText)

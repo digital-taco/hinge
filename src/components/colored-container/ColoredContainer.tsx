@@ -9,7 +9,7 @@ type ColoredContainerProps = ComponentProps<'div'> & {
 }
 
 export default function ColoredContainer({
-  as: TagName,
+  as: TagName = 'div',
   className,
   children,
   ...props

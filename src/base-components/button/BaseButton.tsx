@@ -2,12 +2,11 @@ import { forwardRef } from 'react'
 import BaseClickAffordance from '../click-affordance/BaseClickAffordance'
 import baseStyles from '../base_css.module.css'
 import cx from '../../utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
 
-type BaseButtonProps = React.ComponentProps<'button'>
-
-function BaseButton(
-  { className, children, ...props }: BaseButtonProps,
-  ref: React.Ref<HTMLElement>
+function BaseButton<ComponentType extends React.ElementType = 'button'>(
+  { className, children, ...props }: PolymorphicPropsWithRef<ComponentType>,
+  ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
   return (
     <BaseClickAffordance

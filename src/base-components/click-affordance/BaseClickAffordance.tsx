@@ -1,17 +1,13 @@
 import { forwardRef } from 'react'
 import baseStyles from '../base_css.module.css'
 import cx from '../../utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
 
-type BaseClickAffordanceProps = React.ComponentPropsWithRef<React.ElementType<any>> & {
-  /* It _must_ be given a component type to render as. */
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  as: {}
-}
-
-function BaseClickAffordance(
-  { as: TagName, children, className, ...props }: BaseClickAffordanceProps,
-  ref: React.Ref<HTMLElement>
+function BaseClickAffordance<ComponentType extends React.ElementType = 'div'>(
+  { as, children, className, ...props }: PolymorphicPropsWithRef<ComponentType>,
+  ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
+  const TagName = as || 'div'
   return (
     <TagName {...props} className={cx(className, baseStyles.base_click_affordance)} ref={ref}>
       {children}

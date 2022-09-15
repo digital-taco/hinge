@@ -8,7 +8,7 @@ export default {
   component: BaseList,
 }
 
-const Template: ComponentStory<typeof BaseList> = (args) => (
+export const UnorderedList: ComponentStory<typeof BaseList> = (args) => (
   <BaseList {...args}>
     <BaseListItem>BaseListItem 1</BaseListItem>
     <BaseListItem>BaseListItem 2</BaseListItem>
@@ -16,7 +16,21 @@ const Template: ComponentStory<typeof BaseList> = (args) => (
   </BaseList>
 )
 
-export const Basic = Template.bind({})
+export const OrderedList: ComponentStory<typeof BaseList> = (args) => (
+  <BaseList as="ol" {...args}>
+    <BaseListItem>BaseListItem 1</BaseListItem>
+    <BaseListItem>BaseListItem 2</BaseListItem>
+    <BaseListItem>BaseListItem 3</BaseListItem>
+  </BaseList>
+)
+
+export const AsNav: ComponentStory<typeof BaseList> = (args) => (
+  <BaseList as="nav" {...args}>
+    <BaseListItem>BaseListItem 1</BaseListItem>
+    <BaseListItem>BaseListItem 2</BaseListItem>
+    <BaseListItem>BaseListItem 3</BaseListItem>
+  </BaseList>
+)
 
 export const WithRef: ComponentStory<typeof BaseList> = (args) => {
   const ref = useRef(null)
