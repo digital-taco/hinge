@@ -1,4 +1,4 @@
-import React from 'react'
+import { useRef } from 'react'
 import BaseButton from './BaseButton'
 
 export default {
@@ -13,3 +13,12 @@ export const Basic = (): JSX.Element => (
 export const Styled = (): JSX.Element => (
   <BaseButton style={{ padding: 20, border: 'solid 1px red' }}>BaseButton</BaseButton>
 )
+
+export const WithRef = (): JSX.Element => {
+  const ref = useRef(null)
+  return (
+    <BaseButton style={{ padding: 20, border: 'solid 1px red' }} ref={ref}>
+      BaseButton
+    </BaseButton>
+  )
+}

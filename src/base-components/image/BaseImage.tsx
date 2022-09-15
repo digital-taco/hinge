@@ -1,8 +1,12 @@
+import { forwardRef } from 'react'
+
 type ImageProps = React.ComponentProps<'img'> & {
   /** Alt text is required. */
   alt: string
 }
 
-export default function Image(props: ImageProps): JSX.Element {
-  return <img {...props} />
+function Image(props: ImageProps, ref: React.Ref<HTMLImageElement>): JSX.Element {
+  return <img {...props} ref={ref} />
 }
+
+export default forwardRef(Image)

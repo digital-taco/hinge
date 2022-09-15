@@ -3,13 +3,13 @@ import styles from './ColoredContainer.module.css'
 import cx from '../../utilities/cx'
 
 type ColoredContainerProps = ComponentProps<'div'> & {
-  as?: any
+  as: any
   className?: string
   children?: ReactNode
 }
 
 export default function ColoredContainer({
-  as: TagName = 'div',
+  as: TagName,
   className,
   children,
   ...props

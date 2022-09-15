@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { ComponentStory } from '@storybook/react'
 import BaseClickAffordance from './BaseClickAffordance'
 
@@ -6,10 +7,17 @@ export default {
   component: BaseClickAffordance,
 }
 
-const Template: ComponentStory<typeof BaseClickAffordance> = (args) => (
+export const Basic: ComponentStory<typeof BaseClickAffordance> = (args) => (
   <BaseClickAffordance {...args} as="button">
     Click Affordance
   </BaseClickAffordance>
 )
 
-export const Basic = Template.bind({})
+export const WithRef = (): JSX.Element => {
+  const ref = useRef(null)
+  return (
+    <BaseClickAffordance as="button" ref={ref}>
+      BaseClickAffordance
+    </BaseClickAffordance>
+  )
+}

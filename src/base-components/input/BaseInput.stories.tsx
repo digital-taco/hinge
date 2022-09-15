@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { ComponentStory } from '@storybook/react'
 import BaseInput from './BaseInput'
 
@@ -89,3 +90,8 @@ Url.args = { type: 'url' }
 
 export const Week = Template.bind({})
 Week.args = { type: 'week' }
+
+export const WithRef = (): JSX.Element => {
+  const ref = useRef(null)
+  return <BaseInput type="text" ref={ref} />
+}

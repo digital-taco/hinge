@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { ComponentStory } from '@storybook/react'
 import BaseList from './BaseList'
 import BaseListItem from '../list-item/BaseListItem'
@@ -16,3 +17,14 @@ const Template: ComponentStory<typeof BaseList> = (args) => (
 )
 
 export const Basic = Template.bind({})
+
+export const WithRef: ComponentStory<typeof BaseList> = (args) => {
+  const ref = useRef(null)
+  return (
+    <BaseList {...args} ref={ref}>
+      <BaseListItem>BaseListItem 1</BaseListItem>
+      <BaseListItem>BaseListItem 2</BaseListItem>
+      <BaseListItem>BaseListItem 3</BaseListItem>
+    </BaseList>
+  )
+}
