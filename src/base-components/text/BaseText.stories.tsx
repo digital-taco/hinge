@@ -21,9 +21,9 @@ export const Basic: ComponentStory<typeof BaseText> = () => (
 )
 
 export const WithRef: ComponentStory<typeof BaseText> = () => {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLButtonElement>(null)
   return (
-    <BaseText as="div" ref={ref}>
+    <BaseText as="button" ref={ref}>
       BaseText
     </BaseText>
   )

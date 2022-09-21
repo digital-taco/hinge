@@ -8,10 +8,11 @@ type ButtonProps = React.ComponentPropsWithRef<'button'> & {
   emphasis?: 'low' | 'medium' | 'high'
 }
 
-/**
- *
- */
-export default function Button({ className, emphasis, ...props }: ButtonProps): JSX.Element {
+export default function Button({
+  className,
+  emphasis = 'low',
+  ...props
+}: ButtonProps): JSX.Element {
   return (
     <ClickAffordance
       as={BaseButton}

@@ -58,6 +58,7 @@
 
 .blue_theme {
   --theme-primary-color: 240;
+  --global-lightness-modifier: 1;
 }
 .red_theme {
   --theme-primary-color: 360;
