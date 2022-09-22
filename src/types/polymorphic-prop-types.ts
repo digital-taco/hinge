@@ -16,7 +16,7 @@ export type PolymorphicProps<ComponentType extends React.ElementType, Props = {}
   // Add in the children prop and the as prop
   React.PropsWithChildren<Props & AsProp<ComponentType>> &
     // Add in general react component props and omit any specified props from the general props with conflicting names (i.e. we specify our own "color" or "href" prop)
-    Omit<React.ComponentPropsWithRef<ComponentType>, PropsToOmit<ComponentType, Props>>
+    Omit<React.ComponentPropsWithoutRef<ComponentType>, PropsToOmit<ComponentType, Props>>
 
 export type PolymorphicPropsWithRef<
   ComponentType extends React.ElementType,
