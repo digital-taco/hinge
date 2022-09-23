@@ -1,6 +1,6 @@
-import { ReactNode, ComponentProps } from 'react'
+import React, { ReactNode, ComponentProps } from 'react'
 import styles from './ColoredContainer.module.css'
-import cx from '../../utilities/cx'
+import cx from '@/utilities/cx'
 
 type ColoredContainerProps = ComponentProps<'div'> & {
   as: any

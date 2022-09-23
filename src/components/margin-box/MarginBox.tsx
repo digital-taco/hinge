@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import styles from './MarginBox.module.css'
-import cx from '../../utilities/cx'
-import { Sizes } from '../../types/common'
+import cx from '@/utilities/cx'
+import { Sizes } from '@/types/common'
 
 type MarginBoxProps = React.ComponentProps<'div'> & {
   as?: any

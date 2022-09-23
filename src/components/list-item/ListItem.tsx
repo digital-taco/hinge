@@ -1,7 +1,10 @@
+import React from 'react'
 import styles from './ListItem.module.css'
-import ClickAffordance from '../click-affordance/ClickAffordance'
-import BaseListItem from '../../base-components/list-item/BaseListItem'
-import cx from '../../utilities/cx'
+import { ClickAffordance } from '@/components'
+import { BaseListItem } from '@/base-components'
+import cx from '@/utilities/cx'
+
+// TODO: Polymorphic-ize this
 
 type ListItemProps = React.ComponentPropsWithRef<'li'>
 

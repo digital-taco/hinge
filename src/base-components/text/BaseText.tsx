@@ -1,6 +1,6 @@
-import { forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import baseStyles from '../base_css.module.css'
-import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
 function BaseText<ComponentType extends React.ElementType = 'span'>(
   { as, className, ...props }: PolymorphicPropsWithRef<ComponentType>,

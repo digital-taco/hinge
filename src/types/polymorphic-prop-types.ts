@@ -1,3 +1,4 @@
+import React from 'react'
 /* eslint-disable @typescript-eslint/ban-types */
 
 // This blog was followed to build these types: https://blog.logrocket.com/build-strongly-typed-polymorphic-components-react-typescript/

@@ -1,6 +1,6 @@
-import { forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import baseStyles from '../base_css.module.css'
-import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
 function BaseList<ComponentType extends React.ElementType = 'ul'>(
   { as, children, className, ...props }: PolymorphicPropsWithRef<ComponentType>,

@@ -1,9 +1,9 @@
-import { forwardRef } from 'react'
+import React, { forwardRef, ElementType } from 'react'
 import baseStyles from '../base_css.module.css'
-import cx from '../../utilities/cx'
-import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
+import cx from '@/utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
-function BaseClickAffordance<ComponentType extends React.ElementType = 'div'>(
+function BaseClickAffordance<ComponentType extends ElementType = 'div'>(
   { as, children, className, ...props }: PolymorphicPropsWithRef<ComponentType>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {

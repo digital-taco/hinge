@@ -1,12 +1,12 @@
-import { forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import styles from './ClickAffordance.module.css'
-import BaseClickAffordance from '../../base-components/click-affordance/BaseClickAffordance'
-import cx from '../../utilities/cx'
-import { PolymorphicPropsWithRef, PolymorphicRef } from '../../types/polymorphic-prop-types'
+import { BaseClickAffordance } from '@/base-components'
+import cx from '@/utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
 type ClickAffordanceProps = {
   /* Determines the visual emphasis given to the click affordnace element. */
-  emphasis: 'low' | 'high'
+  emphasis?: 'low' | 'high'
 }
 
 /**

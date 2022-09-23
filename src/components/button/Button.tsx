@@ -1,8 +1,9 @@
+import React from 'react'
 import styles from './Button.module.css'
 import textStyles from '../text.module.css'
-import ClickAffordance from '../click-affordance/ClickAffordance'
-import BaseButton from '../../base-components/button/BaseButton'
-import cx from '../../utilities/cx'
+import { ClickAffordance } from '@/components'
+import { BaseButton } from '@/base-components'
+import cx from '@/utilities/cx'
 
 type ButtonProps = React.ComponentPropsWithRef<'button'> & {
   emphasis?: 'low' | 'medium' | 'high'

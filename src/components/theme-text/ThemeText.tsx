@@ -1,5 +1,8 @@
+import React from 'react'
 import textStyles from '../text.module.css'
-import cx from '../../utilities/cx'
+import cx from '@/utilities/cx'
+
+// TODO: Polymorphic-ize this
 
 type ThemeTextProps = React.ComponentPropsWithRef<any> & {
   /* It _must_ be given a component type to render as. */

@@ -1,7 +1,9 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import styles from './PaddingBox.module.css'
-import cx from '../../utilities/cx'
-import { Sizes } from '../../types/common'
+import cx from '@/utilities/cx'
+import { Sizes } from '@/types/common'
+
+// TODO: Polymorphic-ize this
 
 type PaddingBoxProps = React.ComponentProps<'div'> & {
   as?: any

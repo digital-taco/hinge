@@ -45,3 +45,7 @@ Theme sub variants can be defined. Essentially, these replace the primary and se
 ## Error Color
 
 This is typically red. Not sure if this is really needed.
+
+## DEV Notes
+
+- `import React from 'react'` _must_ be included in every react file that gets built for prod. Otherwise it fails.

@@ -1,7 +1,6 @@
 {
   "name": "@digital-taco/base-library",
-  "private": true,
-  "version": "0.1.0",
+  "version": "0.1.9",
   "scripts": {
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
@@ -10,14 +9,7 @@
     "preview": "vite preview"
   },
   "files": ["dist"],
-  "main": "./dist/my-component-lib.umd.js",
-  "module": "./dist/my-component-lib.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/my-component-lib.es.js",
-      "require": "./dist/my-component-lib.umd.js"
-    }
-  },
+  "main": "./dist",
   "dependencies": {
     "@digital-taco/eslint-config": "^1.1.1",
     "eslint": "^8.22.0",
