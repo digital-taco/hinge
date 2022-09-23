@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styles from './ListItem.module.css'
 import { ClickAffordance } from '@/components'
 import { BaseListItem } from '@/base-components'
@@ -8,7 +8,7 @@ import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-pro
 /**
  *
  */
-export default function ListItem<ComponentType extends React.ElementType = 'li'>(
+function ListItem<ComponentType extends React.ElementType = 'li'>(
   { className, onClick, ...props }: PolymorphicPropsWithRef<ComponentType>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
@@ -24,3 +24,5 @@ export default function ListItem<ComponentType extends React.ElementType = 'li'>
     <BaseListItem {...props} className={cx(className, styles.list_item)} />
   )
 }
+
+export default forwardRef(ListItem)

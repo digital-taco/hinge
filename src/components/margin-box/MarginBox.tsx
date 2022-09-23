@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styles from './MarginBox.module.css'
 import cx from '@/utilities/cx'
 import { Sizes } from '@/types/common'
@@ -11,7 +11,7 @@ type MarginBoxProps = {
   left?: Sizes
 }
 
-export default function MarginBox<ComponentType extends React.ElementType = 'div'>(
+function MarginBox<ComponentType extends React.ElementType = 'div'>(
   {
     as,
     className,
@@ -42,3 +42,5 @@ export default function MarginBox<ComponentType extends React.ElementType = 'div
     </TagName>
   )
 }
+
+export default forwardRef(MarginBox)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styles from './Button.module.css'
 import textStyles from '../text.module.css'
 import { ClickAffordance } from '@/components'
@@ -10,7 +10,7 @@ type ButtonProps = {
   emphasis?: 'low' | 'medium' | 'high'
 }
 
-export default function Button<ComponentType extends React.ElementType = 'button'>(
+function Button<ComponentType extends React.ElementType = 'button'>(
   { className, emphasis = 'low', ...props }: PolymorphicPropsWithRef<ComponentType, ButtonProps>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
@@ -25,3 +25,5 @@ export default function Button<ComponentType extends React.ElementType = 'button
     />
   )
 }
+
+export default forwardRef(Button)
