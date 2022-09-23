@@ -9,10 +9,11 @@ type RowProps = {
  * Row
  */
 function Row<ComponentType extends React.ElementType = 'div'>(
-  { children }: PolymorphicPropsWithRef<ComponentType, RowProps>,
+  { as, children }: PolymorphicPropsWithRef<ComponentType, RowProps>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
-  return <div ref={ref}>{children}</div>
+  const TagName = as || 'div'
+  return <TagName ref={ref}>{children}</TagName>
 }
 
 export default forwardRef(Row)

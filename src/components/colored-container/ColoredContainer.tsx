@@ -1,21 +1,15 @@
-import React, { ReactNode, ComponentProps } from 'react'
+import React from 'react'
 import styles from './ColoredContainer.module.css'
 import cx from '@/utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
-type ColoredContainerProps = ComponentProps<'div'> & {
-  as: any
-  className?: string
-  children?: ReactNode
-}
-
-export default function ColoredContainer({
-  as: TagName = 'div',
-  className,
-  children,
-  ...props
-}: ColoredContainerProps): JSX.Element {
+export default function ColoredContainer<ComponentType extends React.ElementType = 'div'>(
+  { as, className, children, ...props }: PolymorphicPropsWithRef<ComponentType>,
+  ref: PolymorphicRef<ComponentType>
+): JSX.Element {
+  const TagName = as || 'div'
   return (
-    <TagName {...props} className={cx(styles.solid_container_primary, className)}>
+    <TagName {...props} className={cx(styles.solid_container_primary, className)} ref={ref}>
       {children}
     </TagName>
   )

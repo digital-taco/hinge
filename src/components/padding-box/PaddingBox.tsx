@@ -1,30 +1,30 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styles from './PaddingBox.module.css'
 import cx from '@/utilities/cx'
 import { Sizes } from '@/types/common'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
-// TODO: Polymorphic-ize this
-
-type PaddingBoxProps = React.ComponentProps<'div'> & {
-  as?: any
-  className?: string
+type PaddingBoxProps = {
   top?: Sizes
   right?: Sizes
   bottom?: Sizes
   left?: Sizes
-  children?: ReactNode
 }
 
-export default function PaddingBox({
-  as: TagName = 'div',
-  className,
-  top,
-  right,
-  bottom,
-  left,
-  children,
-  ...props
-}: PaddingBoxProps): JSX.Element {
+export default function PaddingBox<ComponentType extends React.ElementType = 'div'>(
+  {
+    as,
+    className,
+    top,
+    right,
+    bottom,
+    left,
+    children,
+    ...props
+  }: PolymorphicPropsWithRef<ComponentType, PaddingBoxProps>,
+  ref: PolymorphicRef<ComponentType>
+): JSX.Element {
+  const TagName = as || 'div'
   return (
     <TagName
       {...props}
@@ -36,6 +36,7 @@ export default function PaddingBox({
         styles[`left_${left}`],
         className
       )}
+      ref={ref}
     >
       {children}
     </TagName>

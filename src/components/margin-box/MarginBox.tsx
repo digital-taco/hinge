@@ -1,28 +1,30 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styles from './MarginBox.module.css'
 import cx from '@/utilities/cx'
 import { Sizes } from '@/types/common'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
-type MarginBoxProps = React.ComponentProps<'div'> & {
-  as?: any
-  className?: string
+type MarginBoxProps = {
   top?: Sizes
   right?: Sizes
   bottom?: Sizes
   left?: Sizes
-  children?: ReactNode
 }
 
-export default function MarginBox({
-  as: TagName = 'div',
-  className,
-  top,
-  right,
-  bottom,
-  left,
-  children,
-  ...props
-}: MarginBoxProps): JSX.Element {
+export default function MarginBox<ComponentType extends React.ElementType = 'div'>(
+  {
+    as,
+    className,
+    top,
+    right,
+    bottom,
+    left,
+    children,
+    ...props
+  }: PolymorphicPropsWithRef<ComponentType, MarginBoxProps>,
+  ref: PolymorphicRef<ComponentType>
+): JSX.Element {
+  const TagName = as || 'div'
   return (
     <TagName
       {...props}
@@ -34,6 +36,7 @@ export default function MarginBox({
         styles[`left_${left}`],
         className
       )}
+      ref={ref}
     >
       {children}
     </TagName>

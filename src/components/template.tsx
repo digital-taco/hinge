@@ -9,10 +9,11 @@ type ComponentNameProps = {
  * ComponentName
  */
 function ComponentName<ComponentType extends React.ElementType = 'div'>(
-  { children }: PolymorphicPropsWithRef<ComponentType, ComponentNameProps>,
+  { as, children }: PolymorphicPropsWithRef<ComponentType, ComponentNameProps>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
-  return <div ref={ref}>{children}</div>
+  const TagName = as || 'div'
+  return <TagName ref={ref}>{children}</TagName>
 }
 
 export default forwardRef(ComponentName)

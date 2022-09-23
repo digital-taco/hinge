@@ -4,16 +4,16 @@ import textStyles from '../text.module.css'
 import { ClickAffordance } from '@/components'
 import { BaseButton } from '@/base-components'
 import cx from '@/utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
-type ButtonProps = React.ComponentPropsWithRef<'button'> & {
+type ButtonProps = {
   emphasis?: 'low' | 'medium' | 'high'
 }
 
-export default function Button({
-  className,
-  emphasis = 'low',
-  ...props
-}: ButtonProps): JSX.Element {
+export default function Button<ComponentType extends React.ElementType = 'button'>(
+  { className, emphasis = 'low', ...props }: PolymorphicPropsWithRef<ComponentType, ButtonProps>,
+  ref: PolymorphicRef<ComponentType>
+): JSX.Element {
   return (
     <ClickAffordance
       as={BaseButton}
@@ -21,6 +21,7 @@ export default function Button({
       emphasis={emphasis === 'medium' ? 'low' : emphasis}
       {...props}
       className={cx(className, styles.button, textStyles.text_emphasis, textStyles.themed_text)}
+      ref={ref}
     />
   )
 }

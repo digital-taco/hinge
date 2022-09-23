@@ -1,12 +1,9 @@
 import React from 'react'
 import textStyles from '../text.module.css'
 import cx from '@/utilities/cx'
+import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
-// TODO: Polymorphic-ize this
-
-type ThemeTextProps = React.ComponentPropsWithRef<any> & {
-  /* It _must_ be given a component type to render as. */
-  as: any
+type ThemeTextProps = {
   /* If true, the text will have slightly less visual emphasis. */
   secondary?: boolean
 }
@@ -14,17 +11,22 @@ type ThemeTextProps = React.ComponentPropsWithRef<any> & {
 /**
  *
  */
-export default function ThemeText({
-  as: TagName,
-  className,
-  secondary = false,
-  ...props
-}: ThemeTextProps): JSX.Element {
+export default function ThemeText<ComponentType extends React.ElementType = 'div'>(
+  {
+    as,
+    className,
+    secondary = false,
+    ...props
+  }: PolymorphicPropsWithRef<ComponentType, ThemeTextProps>,
+  ref: PolymorphicRef<ComponentType>
+): JSX.Element {
+  const TagName = as || 'div'
   return (
     <TagName
       data-text-emphasis={secondary ? 'secondary' : undefined}
       {...props}
       className={cx(className, textStyles.themed_text, textStyles.text_emphasis)}
+      ref={ref}
     />
   )
 }
