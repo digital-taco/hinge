@@ -1,6 +1,6 @@
 {
-  "name": "@digital-taco/base-library",
-  "version": "0.1.9",
+  "name": "@digital-taco/hinge-ui",
+  "version": "0.1.0",
   "scripts": {
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
