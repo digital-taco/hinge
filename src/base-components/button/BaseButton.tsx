@@ -4,6 +4,8 @@ import baseStyles from '../base_css.module.css'
 import cx from '@/utilities/cx'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
+// TODO: This is not polymorphic and it should be. Typescript gets upset for some reason.
+
 function BaseButton<ComponentType extends ElementType = 'button'>(
   { className, children, ...props }: PolymorphicPropsWithRef<ComponentType>,
   ref: PolymorphicRef<ComponentType>
