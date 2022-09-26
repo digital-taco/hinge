@@ -9,12 +9,16 @@ type MarginBoxProps = {
   right?: Sizes
   bottom?: Sizes
   left?: Sizes
+  x?: Sizes
+  y?: Sizes
 }
 
 function MarginBox<ComponentType extends React.ElementType = 'div'>(
   {
     as,
     className,
+    x,
+    y,
     top,
     right,
     bottom,
@@ -30,10 +34,10 @@ function MarginBox<ComponentType extends React.ElementType = 'div'>(
       {...props}
       className={cx(
         styles.margin_box,
-        styles[`top_${top}`],
-        styles[`right_${right}`],
-        styles[`bottom_${bottom}`],
-        styles[`left_${left}`],
+        styles[`top_${top || y}`],
+        styles[`right_${right || x}`],
+        styles[`bottom_${bottom || y}`],
+        styles[`left_${left || x}`],
         className
       )}
       ref={ref}

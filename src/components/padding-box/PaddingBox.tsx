@@ -9,12 +9,16 @@ type PaddingBoxProps = {
   right?: Sizes
   bottom?: Sizes
   left?: Sizes
+  x?: Sizes
+  y?: Sizes
 }
 
 function PaddingBox<ComponentType extends React.ElementType = 'div'>(
   {
     as,
     className,
+    x,
+    y,
     top,
     right,
     bottom,
@@ -29,11 +33,10 @@ function PaddingBox<ComponentType extends React.ElementType = 'div'>(
     <TagName
       {...props}
       className={cx(
-        styles.padding_box,
-        styles[`top_${top}`],
-        styles[`right_${right}`],
-        styles[`bottom_${bottom}`],
-        styles[`left_${left}`],
+        styles[`top_${top || y}`],
+        styles[`right_${right || x}`],
+        styles[`bottom_${bottom || y}`],
+        styles[`left_${left || x}`],
         className
       )}
       ref={ref}

@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+}
+
+.row[data-wrap] {
+  flex-wrap: wrap;
+}
+
+.row[data-alignY="top"] {
+  align-items: top;
+}
+.row[data-alignY="center"] {
+  align-items: center;
+}
+.row[data-alignY="bottom"] {
+  align-items: end;
+}
+
+.row[data-alignX="left"] {
+  justify-content: flex-start;
+}
+.row[data-alignX="center"] {
+  justify-content: center;
+}
+.row[data-alignX="right"] {
+  justify-content: flex-end;
+}

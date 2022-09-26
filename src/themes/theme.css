@@ -36,14 +36,27 @@
   /* THEMED TEXT MODIFIERS (colored text)                               */
   /**********************************************************************/
 
-  /* [MODIFIER VALUE (0 - 1) Scales the saturation of text. */
+  /* [MODIFIER VALUE (0 - 1)] Scales the saturation of text. */
   --text-saturation-modifier: 1;
 
-  /* [MODIFIER VALUE (0 - 1) Scales the lightness of text. */
+  /* [MODIFIER VALUE (0 - 1)] Scales the lightness of text. */
   --text-lightness-modifier: 1;
 
-  /* [MODIFIER VALUE (0 - 1) Scales the alpha of text. */
+  /* [MODIFIER VALUE (0 - 1)] Scales the alpha of text. */
   --text-alpha-modifier: 1;
+
+
+  /**********************************************************************/
+  /* GLOBAL SPACER VALUES                                               */
+  /**********************************************************************/
+
+  --global-spacer-xxs: 4px;
+  --global-spacer-xs: 8px;
+  --global-spacer-sm: 12px;
+  --global-spacer-md: 16px;
+  --global-spacer-lg: 20px;
+  --global-spacer-xl: 28px;
+  --global-spacer-xxl: 40px;
 
   /* global text scalar */
   /* global line height scalar */
