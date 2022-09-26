@@ -3,7 +3,7 @@ import { ComponentStory } from '@storybook/react'
 import BaseInput from './BaseInput'
 
 export default {
-  title: 'Base/Input',
+  title: 'Base/BaseInput',
   component: BaseInput,
 }
 

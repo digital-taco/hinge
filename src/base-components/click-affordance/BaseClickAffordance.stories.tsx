@@ -3,7 +3,7 @@ import { ComponentStory } from '@storybook/react'
 import BaseClickAffordance from './BaseClickAffordance'
 
 export default {
-  title: 'Base/ClickAffordance',
+  title: 'Base/BaseClickAffordance',
   component: BaseClickAffordance,
 }
 

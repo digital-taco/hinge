@@ -4,7 +4,7 @@ import BaseList from '../list/BaseList'
 import { useRef } from 'react'
 
 export default {
-  title: 'Base/ListItem',
+  title: 'Base/BaseListItem',
   component: BaseListItem,
 }
 

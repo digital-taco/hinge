@@ -4,7 +4,7 @@ import BaseList from './BaseList'
 import BaseListItem from '../list-item/BaseListItem'
 
 export default {
-  title: 'Base/List',
+  title: 'Base/BaseList',
   component: BaseList,
 }
 

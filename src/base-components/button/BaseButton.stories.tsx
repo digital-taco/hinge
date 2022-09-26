@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import BaseButton from './BaseButton'
 
 export default {
-  title: 'Base/Button',
+  title: 'Base/BaseButton',
   component: BaseButton,
 }
 
