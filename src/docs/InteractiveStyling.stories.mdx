@@ -1,0 +1,11 @@
+# Interactive Element Styling
+
+Interactive Elements (anything that has to do with the mouse or keyboard) should have the following:
+
+- Color variables for each css state
+  - hover, active, focus, and disabled
+- Default cursor as `pointer`
+- Have a respective cursor when disabled
+- Handle `focus-visible` properly
+
+The consumer should be able to set these variables and override them as needed. Any modifying css, such `transition`, should not be locked down. The consumer should be able to set them.
