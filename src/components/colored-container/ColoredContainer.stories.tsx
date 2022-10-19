@@ -3,7 +3,7 @@ import ColoredContainer from './ColoredContainer'
 import PaddingBox from '../padding-box/PaddingBox'
 
 export default {
-  title: 'Components/ColoredContainer',
+  title: 'Example Library/ColoredContainer',
   component: ColoredContainer,
 }
 
