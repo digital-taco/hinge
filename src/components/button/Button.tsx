@@ -11,7 +11,12 @@ type ButtonProps = {
 }
 
 function Button<ComponentType extends React.ElementType = 'button'>(
-  { className, emphasis = 'low', ...props }: PolymorphicPropsWithRef<ComponentType, ButtonProps>,
+  {
+    className,
+    emphasis = 'low',
+    children,
+    ...props
+  }: PolymorphicPropsWithRef<ComponentType, ButtonProps>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
   return (
@@ -22,7 +27,9 @@ function Button<ComponentType extends React.ElementType = 'button'>(
       {...props}
       className={cx(className, styles.button, textStyles.text_emphasis, textStyles.themed_text)}
       ref={ref}
-    />
+    >
+      {children}
+    </ClickAffordance>
   )
 }
 

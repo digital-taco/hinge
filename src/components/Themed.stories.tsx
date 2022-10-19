@@ -31,8 +31,8 @@ export const ThemedComponents = (): JSX.Element => {
       <br />
       <h2>ThemeText</h2>
       <div style={{ display: 'grid', gap: 20 }}>
-        <ThemeText as="div">[Primary] This text is colored to match the theme.</ThemeText>
-        <ThemeText as="div" secondary>
+        <ThemeText>[Primary] This text is colored to match the theme.</ThemeText>
+        <ThemeText secondary>
           [Secondary] This text is colored to match the theme, but with less emphasis.
         </ThemeText>
       </div>

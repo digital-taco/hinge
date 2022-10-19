@@ -4,7 +4,7 @@ import { BaseList } from '../../base-components'
 import ListItem from './ListItem'
 
 export default {
-  title: 'Components/ListItem',
+  title: 'Example Library/ListItem',
   component: ListItem,
 }
 

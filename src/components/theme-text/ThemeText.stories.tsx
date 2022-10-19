@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import ThemeText from './ThemeText'
 
 export default {
-  title: 'Components/ThemeText',
+  title: 'Example Library/ThemeText',
   component: ThemeText,
 }
 

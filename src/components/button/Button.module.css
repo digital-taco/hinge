@@ -1,6 +1,6 @@
 .button {
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  position: relative;
 }
 
 .button[data-button-emphasis="medium"] {

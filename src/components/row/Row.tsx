@@ -11,7 +11,7 @@ type RowProps = {
 }
 
 /**
- * Row
+ * Row is a layout component that handles laying out items horizontally. It is essentially a dumbed-down flexbox.
  */
 function Row<ComponentType extends React.ElementType = 'div'>(
   {

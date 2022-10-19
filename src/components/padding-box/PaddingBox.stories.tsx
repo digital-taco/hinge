@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import PaddingBox from './PaddingBox'
 
 export default {
-  title: 'Components/PaddingBox',
+  title: 'Example Library/PaddingBox',
   component: PaddingBox,
 }
 

@@ -3,7 +3,7 @@ import Row from './Row'
 import { Button, ColoredContainer, PaddingBox } from '..'
 
 export default {
-  title: 'Components/Row',
+  title: 'Example Library/Row',
   component: Row,
 }
 

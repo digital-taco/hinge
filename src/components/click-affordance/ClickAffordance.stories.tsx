@@ -3,7 +3,7 @@ import ClickAffordance from './ClickAffordance'
 import Button from '../../base-components/button/BaseButton'
 
 export default {
-  title: 'Components/ClickAffordance',
+  title: 'Example Library/ClickAffordance',
   component: ClickAffordance,
 }
 

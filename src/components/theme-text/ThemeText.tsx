@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import textStyles from '../text.module.css'
 import cx from '@/utilities/cx'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
@@ -11,7 +11,7 @@ type ThemeTextProps = {
 /**
  *
  */
-export default function ThemeText<ComponentType extends React.ElementType = 'div'>(
+function ThemeText<ComponentType extends React.ElementType = 'div'>(
   {
     as,
     className,
@@ -30,3 +30,5 @@ export default function ThemeText<ComponentType extends React.ElementType = 'div
     />
   )
 }
+
+export default forwardRef(ThemeText)

@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import Button from './Button'
 
 export default {
-  title: 'Components/Button',
+  title: 'Example Library/Button',
   component: Button,
 }
 
