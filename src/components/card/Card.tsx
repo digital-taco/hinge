@@ -2,23 +2,35 @@ import React, { forwardRef } from 'react'
 import styles from './Card.module.css'
 import cx from '@/utilities/cx'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
+import Elevation from '@/components/elevation/Elevation'
+import PaddingBox from '@/components/padding-box/PaddingBox'
+import { Size } from '@/types/common'
 
 type CardProps = {
-  /* Description. */
-  changeme?: string
+  elevation: Size | 'none'
+  outlined: boolean
 }
 
-/**
- * Description
- */
 function Card<ComponentType extends React.ElementType = 'div'>(
-  { children, className, ...props }: PolymorphicPropsWithRef<ComponentType, CardProps>,
+  {
+    className,
+    elevation = 'xxs',
+    outlined,
+    ...props
+  }: PolymorphicPropsWithRef<ComponentType, CardProps>,
   ref: PolymorphicRef<ComponentType>
 ): JSX.Element {
   return (
-    <div {...props} className={cx(className, styles.changeme)} ref={ref}>
-      {children}
-    </div>
+    <PaddingBox
+      {...props}
+      as={Elevation}
+      elevation={outlined ? 'none' : elevation}
+      x="md"
+      y="md"
+      className={cx(className, styles.card)}
+      data-outlined={outlined ? true : undefined}
+      ref={ref}
+    />
   )
 }
 

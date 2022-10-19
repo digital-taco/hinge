@@ -1,16 +1,16 @@
 import React, { forwardRef } from 'react'
 import styles from './PaddingBox.module.css'
 import cx from '@/utilities/cx'
-import { Sizes } from '@/types/common'
+import { Size } from '@/types/common'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 
 type PaddingBoxProps = {
-  top?: Sizes
-  right?: Sizes
-  bottom?: Sizes
-  left?: Sizes
-  x?: Sizes
-  y?: Sizes
+  top?: Size
+  right?: Size
+  bottom?: Size
+  left?: Size
+  x?: Size
+  y?: Size
 }
 
 function PaddingBox<ComponentType extends React.ElementType = 'div'>(

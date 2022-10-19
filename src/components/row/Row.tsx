@@ -2,11 +2,11 @@ import React, { forwardRef } from 'react'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 import cx from '@/utilities/cx'
 import styles from './Row.module.css'
-import { Sizes } from '@/types/common'
+import { Size } from '@/types/common'
 
 type RowProps = {
   wrap?: boolean
-  gap?: Omit<Sizes, 'xxl'>
+  gap?: Omit<Size, 'xxl'>
   alignY?: 'top' | 'center' | 'bottom'
   alignX?: 'left' | 'center' | 'right'
 }
