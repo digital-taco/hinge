@@ -2,10 +2,11 @@ import React, { forwardRef } from 'react'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
 import cx from '@/utilities/cx'
 import styles from './Row.module.css'
+import { Sizes } from '@/types/common'
 
 type RowProps = {
   wrap?: boolean
-  gap?: string
+  gap?: Omit<Sizes, 'xxl'>
   alignY?: 'top' | 'center' | 'bottom'
   alignX?: 'left' | 'center' | 'right'
 }
@@ -31,7 +32,7 @@ function Row<ComponentType extends React.ElementType = 'div'>(
       className={cx(className, styles.row)}
       ref={ref}
       style={{ gap: gap ? `var(--global-spacer-${gap})` : undefined }}
-      data-wrap={`${wrap}`}
+      data-wrap={wrap ? 'true' : undefined}
       data-alignY={`${alignY}`}
       data-alignX={`${alignX}`}
     >
