@@ -1,9 +1,5 @@
 import { BaseList } from '../base-components'
-import ListItem from './list-item/ListItem'
-import ThemeText from './theme-text/ThemeText'
-import Button from './button/Button'
-import ColoredContainer from './colored-container/ColoredContainer'
-import PaddingBox from './padding-box/PaddingBox'
+import { ListItem, ThemeText, Button, ColoredContainer, PaddingBox, Card } from '@/components'
 
 export default {
   title: 'Components/Themed Components',
@@ -42,6 +38,10 @@ export const ThemedComponents = (): JSX.Element => {
       <PaddingBox as={ColoredContainer} top="md" right="md" bottom="md" left="md">
         This container's background is themed.
       </PaddingBox>
+
+      <br />
+      <h2>Card</h2>
+      <Card outlined>This card's outline is themed.</Card>
     </>
   )
 }
