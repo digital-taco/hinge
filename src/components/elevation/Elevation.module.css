@@ -1,0 +1,14 @@
+.elevation {
+  --elevation-offset: calc(var(--elevation-height) / 3);
+  box-shadow:
+    /* x-offset */
+    0
+    /* y-offset */
+    var(--elevation-offset)
+    /* How much to blur the shadow */
+    calc(var(--elevation-height))
+    /* How much to spread the shadow */
+    calc(var(--elevation-offset) * -1)
+    /* Shadow color */
+    rgb(0, 0, 0, 0.4);
+}

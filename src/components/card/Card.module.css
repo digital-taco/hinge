@@ -1,0 +1,11 @@
+.card {
+  border-radius: 8px;
+}
+
+.card[data-outlined] {
+  border: solid 1px hsl(
+      var(--theme-primary-color)
+      calc(60% * var(--global-saturation-modifier))
+      calc(80% * var(--global-lightness-modifier))
+    );
+}
