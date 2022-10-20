@@ -1,6 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Row from './Row'
-import { Button, ColoredContainer, PaddingBox } from '..'
+import { Row, Button, ColoredContainer, PaddingBox } from '@/components'
 
 export default {
   title: 'Example Library/Row',

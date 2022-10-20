@@ -1,6 +1,6 @@
 import { ComponentStory } from '@storybook/react'
-import ClickAffordance from './ClickAffordance'
-import Button from '../../base-components/button/BaseButton'
+import { ClickAffordance } from '@/components'
+import { BaseButton } from '@/base-components'
 
 export default {
   title: 'Example Library/ClickAffordance',
@@ -10,4 +10,4 @@ export default {
 const Template: ComponentStory<typeof ClickAffordance> = (args) => <ClickAffordance {...args} />
 
 export const Basic = Template.bind({})
-Basic.args = { as: Button, children: 'Click Affordance' }
+Basic.args = { as: BaseButton, children: 'Click Affordance' }

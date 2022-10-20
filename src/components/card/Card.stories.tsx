@@ -1,5 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Card from './Card'
+import { Card } from '@/components'
 
 export default {
   title: 'Components/Card',

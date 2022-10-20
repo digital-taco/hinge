@@ -1,17 +1,23 @@
 import { ComponentStory } from '@storybook/react'
-import MarginBox from './MarginBox'
+import { MarginBox } from '@/components'
 
 export default {
   title: 'Example Library/MarginBox',
   component: MarginBox,
 }
 
+const BorderBox = ({ children }: { children: React.ReactNode }): JSX.Element => (
+  <div style={{ border: 'solid 1px #eee' }}>{children}</div>
+)
+
+const Contents = (): JSX.Element => <div style={{ background: '#eee' }}>MarginBox Contents</div>
+
 const Template: ComponentStory<typeof MarginBox> = (args) => (
-  <div style={{ border: 'solid 1px black' }}>
+  <BorderBox>
     <MarginBox {...args}>
-      <div style={{ background: '#eee' }}>MarginBox</div>
+      <Contents />
     </MarginBox>
-  </div>
+  </BorderBox>
 )
 
 export const Basic = Template.bind({})
@@ -19,41 +25,41 @@ Basic.args = { top: 'sm', right: 'sm', bottom: 'sm', left: 'sm' }
 
 export const AllSizes: ComponentStory<typeof MarginBox> = () => (
   <div style={{ display: 'grid', gap: 16, maxWidth: 400 }}>
-    <div style={{ border: 'solid 1px #eee' }}>
+    <BorderBox>
       <MarginBox top="xxl" right="xxl" bottom="xxl" left="xxl">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
-    <div style={{ border: 'solid 1px #eee' }}>
+    </BorderBox>
+    <BorderBox>
       <MarginBox top="xl" right="xl" bottom="xl" left="xl">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
-    <div style={{ border: 'solid 1px #eee' }}>
+    </BorderBox>
+    <BorderBox>
       <MarginBox top="lg" right="lg" bottom="lg" left="lg">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
-    <div style={{ border: 'solid 1px #eee' }}>
+    </BorderBox>
+    <BorderBox>
       <MarginBox top="md" right="md" bottom="md" left="md">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
-    <div style={{ border: 'solid 1px #eee' }}>
+    </BorderBox>
+    <BorderBox>
       <MarginBox top="sm" right="sm" bottom="sm" left="sm">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
-    <div style={{ border: 'solid 1px #eee' }}>
+    </BorderBox>
+    <BorderBox>
       <MarginBox top="xs" right="xs" bottom="xs" left="xs">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
-    <div style={{ border: 'solid 1px #eee' }}>
+    </BorderBox>
+    <BorderBox>
       <MarginBox top="xxs" right="xxs" bottom="xxs" left="xxs">
-        <div style={{ background: '#eee' }}>Contents</div>
+        <Contents />
       </MarginBox>
-    </div>
+    </BorderBox>
   </div>
 )
 

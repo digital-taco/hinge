@@ -1,6 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Elevation from './Elevation'
-import PaddingBox from '@/components/padding-box/PaddingBox'
+import { Elevation, PaddingBox } from '@/components'
 import { Size } from '@/types/common'
 
 export default {

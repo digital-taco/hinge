@@ -1,6 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import ColoredContainer from './ColoredContainer'
-import PaddingBox from '../padding-box/PaddingBox'
+import { ColoredContainer, PaddingBox } from '@/components'
 
 export default {
   title: 'Example Library/ColoredContainer',

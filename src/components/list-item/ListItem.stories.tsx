@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ComponentStory } from '@storybook/react'
-import { BaseList } from '../../base-components'
-import ListItem from './ListItem'
+import { BaseList } from '@/base-components'
+import { ListItem } from '@/components'
 
 export default {
   title: 'Example Library/ListItem',
