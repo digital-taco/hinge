@@ -17,7 +17,7 @@ const Template: ComponentStory<typeof Elevation> = (args) => (
 
 export const Basic = Template.bind({})
 Basic.args = { elevation: 'sm' }
-Basic.argTypes: {
+Basic.argTypes = {
   elevation: {
     options: ['none', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
     control: { type: 'radio' },

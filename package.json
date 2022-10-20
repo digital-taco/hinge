@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist",
   "dependencies": {
     "@digital-taco/eslint-config": "^1.1.1",
