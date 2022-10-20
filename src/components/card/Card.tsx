@@ -6,8 +6,8 @@ import { Elevation, PaddingBox } from '@/components'
 import { Size } from '@/types/common'
 
 type CardProps = {
-  elevation: Size | 'none'
-  outlined: boolean
+  elevation?: Size | 'none'
+  outlined?: boolean
 }
 
 function Card<ComponentType extends React.ElementType = 'div'>(

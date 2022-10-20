@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import { ColoredContainer, PaddingBox } from '@/components'
 
 export default {
-  title: 'Example Library/ColoredContainer',
+  title: 'Components/ColoredContainer',
   component: ColoredContainer,
 }
 

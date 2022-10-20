@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import { Row, Button, ColoredContainer, PaddingBox } from '@/components'
 
 export default {
-  title: 'Example Library/Row',
+  title: 'Components/Row',
   component: Row,
 }
 

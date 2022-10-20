@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import { MarginBox } from '@/components'
 
 export default {
-  title: 'Example Library/MarginBox',
+  title: 'Components/MarginBox',
   component: MarginBox,
 }
 
