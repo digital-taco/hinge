@@ -1,5 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Button from './Button'
+import { Button } from '@/components'
 
 export default {
   title: 'Example Library/Button',

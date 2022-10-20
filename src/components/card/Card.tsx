@@ -2,8 +2,7 @@ import React, { forwardRef } from 'react'
 import styles from './Card.module.css'
 import cx from '@/utilities/cx'
 import { PolymorphicPropsWithRef, PolymorphicRef } from '@/types/polymorphic-prop-types'
-import Elevation from '@/components/elevation/Elevation'
-import PaddingBox from '@/components/padding-box/PaddingBox'
+import { Elevation, PaddingBox } from '@/components'
 import { Size } from '@/types/common'
 
 type CardProps = {

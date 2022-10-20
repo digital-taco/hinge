@@ -1,6 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Elevation from './Elevation'
-import PaddingBox from '@/components/padding-box/PaddingBox'
+import { Elevation, PaddingBox } from '@/components'
 import { Size } from '@/types/common'
 
 export default {
@@ -18,7 +17,7 @@ const Template: ComponentStory<typeof Elevation> = (args) => (
 
 export const Basic = Template.bind({})
 Basic.args = { elevation: 'sm' }
-Basic.argTypes: {
+Basic.argTypes = {
   elevation: {
     options: ['none', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
     control: { type: 'radio' },

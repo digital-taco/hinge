@@ -1,5 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import ThemeText from './ThemeText'
+import { ThemeText } from '@/components'
 
 export default {
   title: 'Example Library/ThemeText',
